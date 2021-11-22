@@ -1,24 +1,60 @@
 1. Using loops take 10 inputs from user and find the average of all the numbers.
 
+```js
+let average = 0;
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+  let num = +prompt(`Enter number`);
+  for (let i = 1; i <= 10; i++) {
+    sum = sum + num;
+  }
+}
+average = sum / 10;
+console.log(average);
+```
+
 2. What will be the output of the code below
 
 ```js
 let i = 0;
 while (i < 3) {
-  println('hi');
+  print('hi');
   i++;
 }
 ```
+Ans. It will give output "2" and print the current page.
 
 3. Write a function named `getEvenSum` that accepts a parameter `max`. Return the sum of all even numbers. The value of max should default to 10.
-
+function getEvenSum(max = 10) {
+  let evenSum = 0;
+  for (let i = 1; i <= max; i++) {
+    if (i % 2 == 0) {
+      evenSum += i;
+    }
+  }
+  return evenSum;
+}
+```
 4. Write a function named `getOddSum` that accepts a parameter `max`. Return the sum of all odd numbers. The value of max should default to 10.
-
+function getOddSum(max = 10) {
+  let oddSum = 0;
+  for (let i = 1; i <= max; i++) {
+    if (i % 2 !== 0) {
+      oddSum += i;
+    }
+  }
+  return oddSum;
+}
 5. Write a function named `getProductOfDigits` that accepts a parameter `num`. It returns the product of all the digits in the number.
 
 - If the input value is less than 0 return `not a valid input`
 - For example if the input is `123` output should be `6`.
 
+```js
+function getProductOfDigits(num) {
+  return num ** num;
+}
+```
 6. What will be the output of the following code below in multiple conditions? Explain with reason?
 
 ```js
@@ -34,9 +70,9 @@ function check(num) {
   return num;
 }
 
-check(10); // output
-check(1); // output
-check(5); // output
+check(10); // output bigger than 5
+check(1); // output smaller than than 5
+check(5); // output 5
 ```
 
 7. What will be the output of the following code given below? Explain the reason?
@@ -48,9 +84,9 @@ function getOutput(name) {
   return 'Who are you';
 }
 
-getOutput('Arya'); // what will be the output
-getOutput('John'); // what will be the output
-getOutput(); // what will be the output
+getOutput('Arya'); // "You are arya"
+getOutput('John'); // "You are john"
+getOutput(); // "who are you"
 ```
 
 8. What will be the output of the following code given below? Explain the reason?
@@ -59,14 +95,18 @@ getOutput(); // what will be the output
 function getOutput(name) {
   if (name === 'Arya') console.log('You are arya');
   if (name === 'John') console.log('You are john');
-  return 'Who are you';
+  return 'Who are you'; 
 }
 
-getOutput('Arya'); // what will be the output
-getOutput('John'); // what will be the output
-getOutput(); // what will be the output
+getOutput('Arya'); // You are arya "Who are you"
+getOutput('John'); // You are john "Who are you"
+getOutput(); // "Who are you"
 ```
 
 9. Can a function have multiple return statement? Give one example if possible and explain the reason.
 
+Ans.  Yes a function can have multiple return statement as per the condition.
+
 10. What is the difference between `for` loop and `while` loop. What are the different place you can use them? Explain with example.
+
+Ans. For and while are two types of loops For loop requires three requirements such as from where to start, where to end and what to do after each iteration. But while loop requires only a condition.
